@@ -1,0 +1,36 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+
+}
+
+header{}
+.container{width: 1000px;margin: 0 auto;}
+
+.logo{
+    width: 20%;
+    float: left;
+}
+.logo img{}
+.menu-features{
+    width: 80%;
+    float: left;
+}
+.menu-features ul{
+}
+.menu-features ul li{
+    list-style: none;
+    float: left;
+}
+.menu-features ul li a{
+    color: green;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 5px 15px;
+    display: block;
+}
+.menu-features ul li a:hover{}

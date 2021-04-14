@@ -1,0 +1,59 @@
+*{
+	margin: 0x;
+	padding: 0px;
+}
+
+body{
+	background-color: black;
+}
+
+.signin-section{
+	/* width: 500px; */
+	text-align: center;
+	margin: 0 auto;
+	/* background-color: red; */
+	padding-top: 55px;
+}
+
+.signin-box{
+	width: 349px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 7px 16px;
+	background: white;
+}
+
+.signin-box h1{
+	 padding: 0px 0px;
+    font-size: 25px;
+}
+
+.signin-box form{
+	padding: 8px;
+    text-align: left;
+}
+
+.signin-box form label{
+	font-size: 18px;
+    font-weight: 700;
+}
+
+.signin-box form input{
+	width: 100%;
+	padding: 5px 5px;
+	box-sizing: border-box;
+	font-size: 16px;
+	margin-bottom: 3px;
+	border: 1px solid;
+}
+
+.signin-box form p{
+	text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.signin-box form p a{
+	text-decoration: none;
+}
+
