@@ -3,7 +3,7 @@
      if (isset($_POST["login-submit"])) 
      {
      	$username = $_POST["username"];
-     	$pasword = $_POST["password"];
+     	$password = $_POST["password"];
 
 
 
@@ -12,21 +12,21 @@
 
 
 
-     	if (emptyLogin($username, $password) !== false) 
+     	if (emptyLogin($username, $password) !== true) 
      	{
-     		header("location: login.php?error=emptyLoginInput");
+     		header("location: login.php?error=emptylogininput");
      		exit();
      	}
 
      	loginUser($conn, $username, $password);
 
-     }
+}
 
-     else
-     	{
-     		header("location: login.php");
-     		exit();
-     	}
+else
+{
+     header("location: login.php");
+     exit();
+}
 
 
 

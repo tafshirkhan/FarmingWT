@@ -1,13 +1,16 @@
 *{
-	margin:0px;
-	padding:0px;
+    margin:0px;
+    padding:0px;
 }
 body{
 
 }
 
-header{}
-.container{width: 1000px;margin: 0 auto;}
+header{
+    background: #736e6e;
+    overflow: hidden;
+}
+.container{width: 950px;margin: 0 auto;}
 
 .logo{
     width: 20%;
@@ -18,14 +21,13 @@ header{}
     width: 80%;
     float: left;
 }
-.menu-features ul{
-}
+.menu-features ul{}
 .menu-features ul li{
     list-style: none;
     float: left;
 }
 .menu-features ul li a{
-    color: green;
+    color: white;
     text-decoration: none;
     font-size: 16px;
     text-transform: capitalize;
@@ -33,4 +35,7 @@ header{}
     padding: 5px 15px;
     display: block;
 }
-.menu-features ul li a:hover{}
+
+.menu-features ul li a:hover{
+    color: #ff9800;
+}

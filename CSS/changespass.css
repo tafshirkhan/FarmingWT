@@ -1,13 +1,13 @@
 *{
-	margin: 0x;
+	margin: 0px;
 	padding: 0px;
 }
 
 body{
-	/*background-color: black;*/
+	/* background-color: black; */
 }
 
-.signin-section{
+.changes-password{
 	/* width: 500px; */
 	text-align: center;
 	margin: 0 auto;
@@ -15,7 +15,9 @@ body{
 	padding-top: 55px;
 }
 
-.signin-box{
+
+
+.password-box{
 	width: 349px;
 	text-align: center;
 	margin: 0 auto;
@@ -23,22 +25,23 @@ body{
 	background: white;
 }
 
-.signin-box h1{
+.password-box h1{
 	 padding: 0px 0px;
     font-size: 25px;
 }
 
-.signin-box form{
+
+.password-box form{
 	padding: 8px;
     text-align: left;
 }
 
-.signin-box form label{
+.password-box form label{
 	font-size: 18px;
     font-weight: 700;
 }
 
-.signin-box form input{
+.password-box form input{
 	width: 100%;
 	padding: 5px 5px;
 	box-sizing: border-box;
@@ -46,14 +49,3 @@ body{
 	margin-bottom: 3px;
 	border: 1px solid;
 }
-
-.signin-box form p{
-	text-align: center;
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.signin-box form p a{
-	text-decoration: none;
-}
-

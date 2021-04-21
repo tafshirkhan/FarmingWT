@@ -5,7 +5,7 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet"  href="CSS/style.css">
 </head>
 <body>
 
@@ -23,7 +23,7 @@
 	  		<div class="menu-features">
 	  			<ul>
 		             <li><a href="home.php">Home</a></li>
-		             <li><a href="profile.php">Profile</a></li>
+		             <li><a href="index.php">Explore</a></li>
 		
 		             <li><a href="aboutus.php">About Us</a></li>
 		             <li><a href="contact.php">Contact Us</a></li>
@@ -32,15 +32,16 @@
 		                 if (isset($_SESSION["username"])) 
 		                 {
 			                //echo "<li><a href='view.php'>View Profile</a></li>";
+			                echo "<li><a href='profile.php'>Profile</a></li>";
 			                echo "<li><a href='logout.php'>Logout</a></li>";
 
 		                 }
 
 		                 else
 		                 {
-			                echo"<li><a href='login.php'>Login</a></li>";
+			                echo"<li><a href='jsvalidation_login.php'>Login</a></li>";
 		    
-		                    echo"<li><a href='reg.php'>Signup</a></li>";
+		                    echo"<li><a href='jsvalidation_signup.php'>Signup</a></li>";
 
 		                 }
 

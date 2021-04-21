@@ -1,27 +1,51 @@
 <?php
 
-     function emptyInput($firstname,$lastname,$email,$username,$password,$confirmpassword)
+    function emptyInput($firstname, $lastname, $username, $email, $password, $confirmpassword)
     {
     	$result;
-    	if (empty($firstname) && empty($lastname) && empty($email) && empty($username) && empty($password) && empty($confirmpassword)) 
+
+    	if (empty($firstname) && empty($lastname) && empty($username) && empty($email) && empty($password) && empty($confirmpassword)) 
     	{
-    		$result =true;
+    		$result = true;
     	}
+
     	else
     	{
     		$result = false;
     		
     
     	}
+
     	return $result;
 
+
     }
+
+
+    function invalidEmail($email)
+    {
+        $result;
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
+        {
+          $result = true;
+        }
+        else
+        {
+            $result = false;
+        }
+        return $result;
+    }
+
+
+
 
 
     function invalidUsername($username)
     {
     	$result;
-    	if (!preg_match("/^[a-zA-Z0-9]*$/",$username))
+
+    	if (!preg_match("/^[a-zA-Z0-9]*$/", $username))
     	{
     		$result = true;
     	}
@@ -33,25 +57,11 @@
     }
 
 
-    function invalidEmail($email)
+    function passwordMatching($password, $confirmpassword)
     {
     	$result;
-    	if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
-    	{
-    	  $result = true;
-    	}
-    	else
-    	{
-    		$result = false;
-    	}
-    	return false;
-    }
 
-
-    function passwordMatching($password,$confirmpassword)
-    {
-    	$result;
-    	if ($password == $confirmpassword) 
+    	if ($password !== $confirmpassword) 
     	{
     		$result = true;    	
     	}
@@ -64,14 +74,16 @@
 
 
 
-    function existUsername($conn,$username,$email)
+    function existUsername($conn, $username, $email)
     {
+
     	$sql = "SELECT * FROM deliverylogin WHERE userName = ? OR userEmail = ?;";
+
     	$statement = mysqli_stmt_init($conn);
 
     	if (!mysqli_stmt_prepare($statement, $sql)) 
     	{
-    		header("location: reg.php?error=failed");
+    		header("location: reg.php?error=statementfailed");
     		exit();
     	}
 
@@ -103,7 +115,7 @@
 
     	if (!mysqli_stmt_prepare($statement, $sql)) 
     	{
-    		header("Location: reg.php?error=failed");
+    		header("location: reg.php?error=statementfailed");
     		exit();
     	}
 
@@ -115,7 +127,7 @@
     	mysqli_stmt_execute($statement);
     	mysqli_stmt_close($statement);
 
-    	header("Location: reg.php?error=none");
+    	header("location: reg.php?error=none");
     	exit();
     }
 
@@ -125,7 +137,7 @@
     {
         $result;
 
-        if (empty($username) && empty($password)) 
+        if (empty($username) || empty($password)) 
         {
             $result = true;
         }
@@ -136,6 +148,7 @@
         return $result;
     }
 
+
     function loginUser($conn, $username, $password)
     {
         $existUser = existUsername($conn, $username, $username);
@@ -143,7 +156,7 @@
 
         if ($existUser == false) 
         {
-            header("location: login.php?error=informationmismatched");
+            header("location: login.php?error=wronglogin");
             exit();
         }
 
@@ -153,7 +166,7 @@
 
         if ($passwordChecked == false) 
         {
-            header("location: login.php?error=informationmismatched");
+            header("location: login.php?error=wronglogin");
             exit();
         }
         else if ($passwordChecked == true) 
@@ -161,11 +174,55 @@
             session_start();
             $_SESSION["userid"] = $existUser["userId"];
             $_SESSION["username"] = $existUser["userName"];
+            $_SESSION["userpassword"] = $existUser["userPassword"];
+
+
             header("location: header.php");
             exit();
         }
 
     }
+
+
+
+    function emptyPasswordField($oldpassword, $newpassword, $confirmpassword)
+    {
+         $value;
+
+        if (empty($oldpassword) || empty($newpassword) || empty($confirmpassword)) 
+        {
+            $value = true;
+        }
+        else
+        {
+            $value = false;
+        }
+        return $value;
+    }
+
+
+    /*function passwordNotMatched($newpassword, $confirmpassword)
+    {
+        $result;
+        if ($newpassword == $confirmpassword) 
+        {
+            $result = true;        
+        }
+        else
+        {
+            $result = false;
+        }
+        return $result;
+
+    }
+
+
+    function changesPassword($conn, $oldpassword, $newpassword)
+    {
+        $sql = "SELECT * FROM deliverylogin WHERE userPassword = ?;";
+        $statement = mysqli_stmt_init($conn);
+
+    }*/
 
 
 

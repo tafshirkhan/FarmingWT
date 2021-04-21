@@ -1,10 +1,10 @@
 *{
-	margin: 0px;
-	padding: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 body{
-    background-color: black;
+    /* background-color: black; */
 }
 
 .signup-section{
@@ -12,7 +12,7 @@ body{
     text-align: center;
     margin: 0 auto;
     /* background-color: red; */
-    padding-top: 55px;
+    padding-top: 25px;
 }
 
 .signup-box{
@@ -39,12 +39,12 @@ body{
 }
 
 .signup-box form input{
-	width: 100%;
-	padding: 5px 5px;
-	box-sizing: border-box;
-	font-size: 16px;
-	margin-bottom: 3px;
-	border: 1px solid;
+    width: 100%;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 3px;
+    border: 1px solid;
 }
 
 .signup-box form p{
