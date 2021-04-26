@@ -2,13 +2,14 @@
 <html>
 <head>
 	<title>UPDATE USER INFORMATION</title>
+	<link rel="stylesheet" href="CSS/style3.css">
 </head>
 <body>
 
 	<div class="update-section"> 
 
 	 <div class="update-box"> 
-	        <h1>Update your details</h1>    
+	        <h1>Update Information</h1>    
 
 	    <form action="update.ex.php" method="POST">
 		

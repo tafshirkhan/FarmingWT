@@ -1,0 +1,58 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    /* background-color: black; */
+}
+
+.update-section{
+    /* width: 500px; */
+    text-align: center;
+    margin: 0 auto;
+    /* background-color: red; */
+    padding-top: 35px;
+}
+
+.update-box{
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 28px 18px;
+    background: white;
+}
+
+.update-box h1{
+    padding: 0px 0px;
+    font-size: 25px;
+}
+
+.update-box form{
+    padding: 8px;
+    text-align: left;
+}
+
+.update-box form label{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.update-box form input{
+    width: 100%;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 6px;
+    border: 1px solid;
+}
+
+.update-box form p{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.update-box form p a{
+    text-decoration: none;
+}

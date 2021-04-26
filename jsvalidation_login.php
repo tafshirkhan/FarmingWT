@@ -34,7 +34,7 @@
 			
 			<input type="submit" name="login-submit" value="Login">
 			
-			<p>Not an user? <a href="reg.php">Signup</a></p>
+			<p>Not an user? <a href="jsvalidation_signup.php">Signup</a></p>
 		
 
 	    </form>

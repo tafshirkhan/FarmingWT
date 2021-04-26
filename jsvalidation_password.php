@@ -41,6 +41,7 @@
       	  		
 
       	  	</form>
+            <p><a style="text-decoration: none; font-size: 18px; font-weight: 700;" href="editprofile.php">Go Back</a></p>
       	  	
       	  </div>
 

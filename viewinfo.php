@@ -11,6 +11,7 @@ session_start();
 			padding-top: 60px;
 
 		}
+       
 	</style>
 </head>
 <body>
@@ -64,7 +65,7 @@ session_start();
     	
     </table>
 
-      <p style="font-size: 20px; font-weight: 700; text-align: center; "><a style="text-decoration: none;" href="editprofile.php">Go Back</a></p>
+      <p style="font-size: 18px; font-weight: 700; text-align: center; "><a style="text-decoration: none; color: #3d3df1; " href="editprofile.php">Go Back</a></p>
     	
     </div>
 

@@ -18,11 +18,25 @@
 		.activities-section ul li{}
 
 		.activities-section ul li a{
+			font-size: 20px;
+			font-weight: 700;
+			color: black;
 			text-decoration: none;
 		}
+		.activities-section ul li a:hover{
+			color: #ff9800;
+			
+		}
 		
-		.activities-section p{
+		.activities-section p a{
 			text-align: center;
+			font-size: 18px;
+			font-weight: 700;
+			color: #3d3df1;
+			text-decoration: none;
+		}
+		.activities-section p a:hover{
+			color: red;
 		}
 	</style>
 </head>
@@ -37,11 +51,12 @@
      	<ul><li> <a href="paymentinfo.php">Payment Details</a></li></ul>
      	<ul><li> <a href="customerinfo.php">Customer Details</a></li></ul>
      	<ul><li><a href="orderinfo.php">Order List</a></li></ul>
-     	
-     	<ul><li><p><a href="header.php">Go back</a></p></li></ul>
-     	
- 
+     	<ul><li><a href="ordertracking.php">Order Tracking</a></li></ul>
+     	<br>
+
+     	<p><a href="header.php">Go back</a></p>
      </div>
+     
      
 
 </body>

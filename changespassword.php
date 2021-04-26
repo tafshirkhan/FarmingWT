@@ -36,7 +36,7 @@
    	 		if ($query1) 
    	 		{
    	 			header("location: passwordchanges.php?error=success");
-     	        exit();
+     	         exit();
    	 		}
    	 	}
    	 	else

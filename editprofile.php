@@ -13,9 +13,28 @@
 			list-style: none;
 			padding-top: 10px;
 		}
+		.section ul li{
+
+		}
 		
-		.section a{
+		.section ul li a{
+			font-size: 20px;
+			font-weight: 700;
+			color: black;
 			text-decoration: none;
+		}
+		.section ul li a:hover{
+			color: #ff9800;
+		}
+		.section p a{
+			text-align: center;
+			font-size: 18px;
+			font-weight: 700;
+			color: #3d3df1;
+			text-decoration: none;
+		}
+		.section p a:hover{
+			color: red;
 		}
 	</style>
 </head>
@@ -31,11 +50,11 @@
     <div class="section">  
 
 	
-		<ul><li><p><a href="viewinfo.php">View Details</a></p></li></ul>
-		<ul><li><p><a href="updateinfo.php">Update Information</a></p></li></ul>
-		<ul><li><p><a href="jsvalidation_password.php">Changes Password</a></p></li></ul>
+		<ul><li><a href="viewinfo.php">View Details</a></li></ul>
+		<ul><li> <a href="updateinfo.php">Update Information</a> </li></ul>
+		<ul><li> <a href="jsvalidation_password.php">Changes Password</a> </li></ul>
 		<br>
-		<ul><li><p><a href="profile.php">Go Back</a></p></li></ul>
+		<p><a href="profile.php">Go Back</a></p>
 
 
 	</div>

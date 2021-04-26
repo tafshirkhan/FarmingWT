@@ -45,7 +45,7 @@
 			
 			<input type="submit" name="reg-submit" value="Register">
 			
-			<p>Alreadt and user? <a href="jsvalidation_login.php">Login</a></p>
+			<p>Alreadt an user? <a href="jsvalidation_login.php">Login</a></p>
 		
 
 	     </form>
