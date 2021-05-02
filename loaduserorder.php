@@ -48,6 +48,7 @@
                	      echo "<form action='ordertracking.php' method='POST'>
 
                                <select name='status' onchange='form.submit()'>
+                                     <option value='value'></option>
                                      <option value='Pending'>Pending</option>
                                      <option value='On Way'>On Way</option>
                                      <option value='Delivered'>Delivered</option>

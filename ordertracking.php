@@ -43,11 +43,23 @@
         
 
     ?>
+    <?php
+    include_once('db.php');
+  
+  if (isset($_POST['status'])) 
+  {
+    $status = htmlspecialchars(mysqli_escape_string($conn, $_POST['status']));
+    $id = htmlspecialchars(mysqli_escape_string($conn, $_POST['id']));
+    $sql = "UPDATE orderinfo SET orderStatus='$status' WHERE orderId='$id'";
+    $result= mysqli_query($conn, $sql);
+    
+  }
+?>
 
 <div id="load-data">
 <?php
      include_once('db.php');
-     include_once('action.php');
+     //include_once('action.php');
 
      $query = "SELECT * FROM orderinfo orinfo, customerinfo cusinfo, productinfo proinfo WHERE cusinfo.customerId=orinfo.idCustomer AND proinfo.productId=orinfo.idProduct ORDER BY orderId ASC LIMIT 2";
      $result = mysqli_query($conn, $query);
@@ -93,6 +105,7 @@
                	      echo "<form action='ordertracking.php' method='POST'>
 
                                <select name='status' onchange='form.submit()'>
+                                     <option value='value'></option>
                                      <option value='Pending'>Pending</option>
                                      <option value='On Way'>On Way</option>
                                      <option value='Delivered'>Delivered</option>
